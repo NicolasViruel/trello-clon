@@ -1,0 +1,40 @@
+<div class="w-screen h-screen bg-gray-50 sm:bg-gray-50 relative">
+    <div class="absolute w-full h-full hidden sm:block">
+        <img class="absolute w-60 lg:w-96 left-0 bottom-0 " src="/assets/images/Logo/login-left.svg" alt="bg left" loading="lazy">
+        <img class="absolute w-60 lg:w-96 right-0 bottom-0" src="/assets/images/Logo/login-rigth.svg" alt="bg left" loading="lazy">
+    </div>     
+    <div class="relative w-full sm:-7/12 md:w-6/12 lg:w-4/12 m-auto">
+        <header class="pt-12 pb-2 flex justify-center">
+            <img class="w-56" src="/assets/images/Logo/trello-logo-gradient-blue-attribution_rgb.svg" alt="logo">
+        </header>
+        <div class="bg-white rounded shadow py-4 px-6">
+            <div class="mb-4">
+                <h1 class="text-center font-semibold pt-4 pb-8">Log In to Trello</h1>
+                <!-- space-y-4 es un espaciado homogenio entre los input -->
+                <form novalidate class="space-y-4">
+                    <div class="relative">
+                        <input type="email" placeholder="Enter email"
+                        class="w-full rounded bg-gray-100 border-2 border-gray-300" >
+                    </div>
+                    <div class="relative">
+                        <input type="password" placeholder="Enter password"
+                        class="w-full rounded bg-gray-100 border-2 border-gray-300" >
+                    </div>
+                    <div>
+                        <app-btn [typeBtn]="'submit'">Log in</app-btn>
+                    </div>
+                    <hr class="my-4 border-b-1 border-r-gray-300">
+                    <div class=" flex justify-center space-x-0 space-y-2 md:space-x-2 md:space-y-2 md:flex-row flex-col text-center">
+                        <a [routerLink]="['/forgot-password']" class="text-blue-600 font-light" >Can´t log in</a>
+                        <span class="text-gray-500 hidden md:block" style="margin-top: 0;">·</span>
+                        <a [routerLink]="['/register']" class="text-blue-600 font-light" style="margin-top: 0;" >Sign up for an account</a>
+                    </div>
+                    <hr class="mt-10 border-b-1 border-r-gray-300">
+                    <div class="flex justify-center">
+                        <img src="/assets/images/Logo/horizontal-logo-gradient-neutral-atlassian.svg" alt="logo" class="w-32 mt-4" loading="lazy">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
