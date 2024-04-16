@@ -1,4 +1,4 @@
-<nav class="bg-primary-700 border-gray-200 px-6 shadow-md">
+<nav class="bg-primary-600 border-gray-200 px-6 shadow-md">
     <div class="flex flex-wrap justify-between item-center">
         <div class="flex items-center">
             <a [routerLink]="['/']">
@@ -26,7 +26,11 @@
                 </ul>
             </div>
         </div>
-        <div class="flex items-center">
+        <div class="flex items-center gap-x-2">
+           
+            <i class="bi bi-bell-fill text-white"></i>
+            <i class="bi bi-info-circle-fill text-white"></i>
+            
             <!-- cambiamos estado con el click para overlay -->
             <button
             type="button"
@@ -45,65 +49,8 @@
         </div>
     </div>
 </nav>
-<p>Hola </p>
-<p>Hola </p>
-<p>Hola </p>
-<p>Hola </p>
-<p>Hola </p>
-<button
-type="button"
-class="flex rounded-full"
-aria-expanded="false"
-type="button"
-(click)="isOpenBody = !isOpenBody"
-cdkOverlayOrigin
-#bodyOverlay="cdkOverlayOrigin"
->
-<img
- class="w-8 h-8 rounded-full"
- src="/assets/images/Logo/usuario.png"
- alt="user photo">
-</button>
-<p>Hola </p>
-<p>Hola </p>
-<p>Hola </p>
-<ng-template cdkConnectedOverlay [cdkConnectedOverlayOrigin]="menuOverlay" [cdkConnectedOverlayOpen]="isOpen" >
-    <div class="z-50 my-4 text-base list-none bg-white rounded divide-y divide-gray-100 shadow w-56">
-        <div class="py-3 px-4 flex justify-between">
-            <span class="block text-sm text-gray-900">Account</span>
-            <button (click)="isOpen = !isOpen" class="block text-sm text-gray-900">X</button>
-        </div>
-        <div class="py3 px4 flex items-center space-x-4">
-            <img src="/assets/images/Logo/usuario.png" class="w-10 h-10 ml-4  rounded-full">
-            <div class="space-y-1">
-                <div>Jese Leos</div>
-                <div class="text-sm text-gray-500">nico@gmail.com</div>
-            </div>
-        </div>
-        <ul class="py-1" aria-labelledby="user-menu-button">
-            <li>
-                <a href="#" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600">Profile</a>
-            </li>
-            <li>
-                <a href="#" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600">Activity</a>
-            </li>
-            <li>
-                <a href="#" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600">Cards</a>
-            </li>
-            <li>
-                <a href="#" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600">Settings</a>
-            </li>
-            <li>
-                <a href="#" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600">Earnings</a>
-            </li>
-            <li>
-                <a href="#" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600">Sign Out</a>
-            </li>
-        </ul>
-    </div>
-</ng-template>
 
-<ng-template cdkConnectedOverlay [cdkConnectedOverlayOrigin]="bodyOverlay" [cdkConnectedOverlayOpen]="isOpenBody" >
+<ng-template cdkConnectedOverlay [cdkConnectedOverlayOrigin]="menuOverlay" [cdkConnectedOverlayOpen]="isOpen" >
     <div class="z-50 my-4 text-base list-none bg-white rounded divide-y divide-gray-100 shadow w-56">
         <div class="py-3 px-4 flex justify-between">
             <span class="block text-sm text-gray-900">Account</span>
