@@ -18,11 +18,11 @@
                 </a>
             </li>
         </ul>
-
+        
         <cdk-accordion>
-            <cdk-accordion-item>
-                <button>My workspace</button>
-                <div>
+            <cdk-accordion-item #accordionMenu="cdkAccordionItem">
+                <button type="button" (click)="accordionMenu.toggle()">My workspace</button>
+                <div [style.display]="accordionMenu.expanded ? '' : 'none' ">
                     Panel
                     <p>asdasd</p>
                     <p>asdasd</p>
