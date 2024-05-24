@@ -1,4 +1,14 @@
 html, body {
     height: 100%;
     margin: 0;
-  }
+}
+
+/*Animate items as they are being sorted  */
+.cdk-drop-list-dragging .cdk-drag{
+  transition: transform 250ms cubic-bezier(0 , 0 , 0.2, 1);
+}
+
+/*Animate an item that has been dropped  */
+.cdk-drag-animating {
+  transition: transform 300ms cubic-bezier(0 , 0 , 0.2, 1);
+}
