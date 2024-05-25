@@ -1,10 +1,11 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
-//overlay de CDK y acordeon
+//overlay de CDK y acordeon, DragDrop, DialogModule
 import { OverlayModule } from '@angular/cdk/overlay';
 import { CdkAccordionModule } from "@angular/cdk/accordion";
 import { DragDropModule } from "@angular/cdk/drag-drop";
+// import {MatDialogModule} from '@angular/material/dialog';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -28,7 +29,8 @@ import { BoardComponent } from './pages/board/board.component';
     OverlayModule,
     AppRoutingModule,
     CdkAccordionModule,
-    DragDropModule
+    DragDropModule,
+    // MatDialogModule
   ],
   providers: [],
   bootstrap: [AppComponent]
