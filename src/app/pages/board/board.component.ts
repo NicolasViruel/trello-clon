@@ -1,6 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output } from '@angular/core';
 import { CdkDragDrop, moveItemInArray, transferArrayItem } from '@angular/cdk/drag-drop'; 
+//dialog funciona como un servicio, enotnces necesitamos hacer la llamada en el constructor
+import { Dialog } from '@angular/cdk/dialog';
+
 import { Column, ToDo } from 'src/app/models/todo.model';
+import { TodoDialogComponent } from 'src/app/components/todo-dialog/todo-dialog.component';
 
 @Component({
   selector: 'app-board',
@@ -50,7 +54,9 @@ export class BoardComponent implements OnInit {
 
   done: ToDo[] = [];
 
-  constructor() { }
+  constructor(
+    private dialog: Dialog
+  ) { }
 
   ngOnInit(): void {
   }
@@ -77,5 +83,22 @@ export class BoardComponent implements OnInit {
       todos: [],
     })
   }
+
+  openDialog(todo: ToDo){
+    const dialogRef = this.dialog.open(TodoDialogComponent,{
+      minWidth: '300px',
+      maxWidth: '50%',
+      //aca es donde podemos enviar la informacion
+      data: {
+        todo: todo,
+      }
+    });
+  //para recibir informacion guardamos la instacia que nos devuelve el open, entonces nos suscribimos
+    dialogRef.closed.subscribe(output => {
+      console.log(output);
+    })
+}
+
+
 
 }

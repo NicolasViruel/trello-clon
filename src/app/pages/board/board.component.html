@@ -14,7 +14,9 @@
             </div>
             <!-- el cdkDropList es el que ayuda a la renderizacion entre columnas -->
             <div class="text-sm mt-2 min-h-custom" cdkDropList (cdkDropListDropped)="drop($event)" [cdkDropListData]="column.todos">
+              <!-- al hacerle click para que habra el detalle se necesita del todo-dialog -->
               <div
+              (click)="openDialog(todo)"
               *ngFor="let todo of column.todos"
               cdkDrag
                 class="bg-white shadow p-2 rounded mt-2 border-b border-x-gray-300 cursor-pointer hover:bg-gray-400"
