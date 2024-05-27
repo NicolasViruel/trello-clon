@@ -50,15 +50,25 @@
         </div>
     </div>
 </nav>
-
-<ng-template cdkConnectedOverlay [cdkConnectedOverlayOrigin]="menuOverlay" [cdkConnectedOverlayOpen]="isOpen" >
+<!-- (overlayOutsideClick) es para cerrar el modal una vez que haga click en cualquier lado -->
+<ng-template 
+    cdkConnectedOverlay
+    [cdkConnectedOverlayOrigin]="menuOverlay"
+    [cdkConnectedOverlayOpen]="isOpen"
+    (overlayOutsideClick)="isOpen = !isOpen"
+>
     <div class="z-50 my-4 text-base list-none bg-white rounded divide-y divide-gray-100 shadow w-56">
         <div class="py-3 px-4 flex justify-between">
             <span class="block text-sm text-gray-900">Account</span>
             <button (click)="isOpen = !isOpen" class="block text-sm text-gray-900">X</button>
         </div>
         <div class="py3 px4 flex items-center space-x-4">
-            <img src="/assets/images/Logo/usuario.png" class="w-10 h-10 ml-4  rounded-full">
+            <!-- <img src="/assets/images/Logo/usuario.png" class="w-10 h-10 ml-4  rounded-full"> -->
+            <img
+            class="w-8 h-8 rounded-full"
+            src="https://source.unsplash.com/random/100x100"
+            alt="user photo"
+          />
             <div class="space-y-1">
                 <div>Jese Leos</div>
                 <div class="text-sm text-gray-500">nico@gmail.com</div>

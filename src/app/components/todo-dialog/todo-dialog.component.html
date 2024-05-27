@@ -15,28 +15,36 @@
         <div class="flex flex-col">
           <h3 class="text-lg font-semibold text-gray-800">Description</h3>
           <p class="text-sm text-gray-500">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis, hic? Adipisci soluta cum odio, beatae ratione magni nobis, optio similique rerum minus excepturi sed vel, id voluptatibus repellendus numquam quod.</p>
-          <div class="flex space-x-2">
+          <div class="flex space-x-2 mt-3">
             <app-btn [typeBtn]="'button'" [color]="'success'" (click)="CloseWithRta(true)">Si</app-btn>
-            <app-btn [typeBtn]="'button'" [color]="'red'" (click)="CloseWithRta(true)">No</app-btn>
+            <app-btn [typeBtn]="'button'" [color]="'danger'" (click)="CloseWithRta(true)">No</app-btn>
           </div>
         </div>
       </div>
       <div class="flex flex-auto space-y-2 flex-col">
-        <app-btn typeBtn="button" color="gray-light">
-          <i class="bi bi-person-fill text-gray-800"></i>
-          Members
+        <app-btn typeBtn="button" color="light">
+          <span class="flex space-x-2 text-left">
+            <i class="bi bi-person-fill text-gray-800"></i>
+            <span>Members</span>
+          </span>
         </app-btn>
-        <app-btn typeBtn="button" color="gray-light">
-          <i class="bi bi-bookmark-check-fill text-gray-800"></i>
-          Labels
+        <app-btn typeBtn="button" color="light">
+          <span class="flex space-x-2 text-left">
+            <i class="bi bi-bookmark-check-fill text-gray-800"></i>
+            <span>Labels</span>
+          </span>
         </app-btn>
-        <app-btn typeBtn="button" color="gray-light">
-          <i class="bi bi-list-check text-gray-800"></i>
-          Checklist
+        <app-btn typeBtn="button" color="light">
+          <span class="flex space-x-2 text-left">
+            <i class="bi bi-list-check text-gray-800"></i>
+            <span>Checklist</span>
+          </span>
         </app-btn>
-        <app-btn typeBtn="button" color="gray-light">
+        <app-btn typeBtn="button" color="light">
+          <span class="flex space-x-2 text-left">
             <i class="bi bi-clock-fill text-gray-800"></i>
-          Dates
+            <span>Dates</span>
+          </span>
         </app-btn>
       </div>
     </div>
